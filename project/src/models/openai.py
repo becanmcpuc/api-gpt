@@ -12,7 +12,7 @@ class GPT:
     def ask(self, text: str):
         response = self.client.responses.create(
             model=self.model,
-            input=text
+            input=f'{text}'
         )
 
         return response.output_text
